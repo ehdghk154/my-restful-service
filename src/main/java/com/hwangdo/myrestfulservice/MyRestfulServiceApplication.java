@@ -8,6 +8,12 @@ public class MyRestfulServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MyRestfulServiceApplication.class, args);
+
+		// 등록된 bean 출력
+//		String[] allBeanNames = ac.getBeanDefinitionNames();
+//		for(String beanName : allBeanNames) {
+//			System.out.println(beanName);
+//		}
 	}
 
 }
