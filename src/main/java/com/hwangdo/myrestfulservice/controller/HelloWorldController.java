@@ -23,7 +23,7 @@ public class HelloWorldController {
 
     @GetMapping(path = "/hello-world-bean/path-variable/{name}")
     public HelloWorldBean helloWorldBeanPathVariable(@PathVariable String name) {
-        // bean으로 전달이 되면 스프링에서는 responseBody로 변환되기 때문에 json 형태 값을 가짐
+        // 경로 변수로 name을 데이터로 받아 로직에 사용
         return new HelloWorldBean(String.format("Hello World, %s", name));
     }
 }
