@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 // @Service를 사용할 수 있지만 DAO와 Service 기능을 혼합한 클래스이기 때문에
@@ -42,6 +43,21 @@ public class UserDaoService {
     public User findOne(int id) {
         for(User user : users) {
             if(user.getId() == id) {
+                return user;
+            }
+        }
+
+        return null;
+    }
+
+    public User deleteById(int id) {
+        Iterator<User> iterator = users.iterator();
+
+        while(iterator.hasNext()) {
+            User user = iterator.next();
+
+            if(user.getId() == id) {
+                iterator.remove();
                 return user;
             }
         }
