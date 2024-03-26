@@ -17,9 +17,9 @@ public class UserDaoService {
     private static int usersCount = 3;
 
     static {
-        users.add(new User(1, "Dante", new Date()));
-        users.add(new User(2, "Sendi", new Date()));
-        users.add(new User(3, "Volta", new Date()));
+        users.add(new User(1, "Dante", new Date(), "test1", "900101-1111111"));
+        users.add(new User(2, "Sendi", new Date(), "test2", "950111-2222222"));
+        users.add(new User(3, "Volta", new Date(), "test3", "930121-1234567"));
     }
 
     public User save(User user) {
