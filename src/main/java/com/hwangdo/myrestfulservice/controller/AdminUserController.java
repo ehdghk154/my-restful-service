@@ -7,21 +7,16 @@ import com.hwangdo.myrestfulservice.bean.AdminUser;
 import com.hwangdo.myrestfulservice.bean.User;
 import com.hwangdo.myrestfulservice.dao.UserDaoService;
 import com.hwangdo.myrestfulservice.exception.UserNotFoundException;
-import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/admin")
 public class AdminUserController {
-    private UserDaoService service;
+    private final UserDaoService service;
 
     // 의존성 주입 (생성자 주입)
     public AdminUserController(UserDaoService service) {

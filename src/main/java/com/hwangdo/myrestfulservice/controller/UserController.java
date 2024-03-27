@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    private UserDaoService service;
+    private final UserDaoService service;
 
     // 의존성 주입 (생성자 주입)
     public UserController(UserDaoService service) {
