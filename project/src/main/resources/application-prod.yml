@@ -15,7 +15,7 @@ spring:
   message:
     basename: messages
   datasource:
-    url: jdbc:mysql://${API_MYSQL_HOST}:${API_MYSQL_PORT}/${API_DATA_BASE_NAME}?useSSL=false
+    url: jdbc:mysql:/${API_MYSQL_HOST}:${API_MYSQL_PORT}/${API_DATA_BASE_NAME}?useSSL=false
     #jdbc:mysql://localhost:3306/test
     username: ${API_MYSQL_USER_NAME}
     password: ${API_MYSQL_PASSWORD}
