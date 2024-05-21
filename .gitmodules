@@ -1,4 +1,0 @@
-[submodule "project/submodule-config"]
-	path = project/submodule-config
-	url = https://github.com/ehdghk154/submodule-config
-	branch = main

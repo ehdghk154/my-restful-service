@@ -1,0 +1,39 @@
+server:
+  port: 8088
+
+logging:
+  level:
+    org:
+      springframework: debug
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: my-restful-service
+  message:
+    basename: messages
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      setting:
+        web-allow-others: true
+#  security:
+#    user:
+#      name: username
+#      password: passw0rd
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
